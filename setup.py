@@ -8,11 +8,11 @@ import setuptools.command.sdist
 # Patch setuptools' sdist behaviour with distutils' sdist behaviour
 setuptools.command.sdist.sdist.run = distutils.command.sdist.sdist.run
 
-VERSION = __import__('dxlepoclient').get_version()
+VERSION = __import__('dxlcuckooclient').get_version()
 
 dist = setup(
     # Application name:
-    name="dxlepoclient",
+    name="dxlcuckooclient",
 
     # Version number:
     version=VERSION,
@@ -23,22 +23,22 @@ dist = setup(
     },
 
     # Application author details:
-    author="McAfee, Inc.",
+    author="Jesse Netz, McAfee, Inc.",
 
     # License
     license="Apache License 2.0",
 
-    keywords=['opendxl', 'dxl', 'mcafee', 'client', 'epo'],
+    keywords=['opendxl', 'dxl', 'mcafee', 'client', 'cuckoo'],
 
     # Packages
     packages=[
-        "dxlepoclient",
+        "dxlcuckooclient",
     ],
 
     # Details
     url="http://www.mcafee.com/",
 
-    description="McAfee ePolicy Orchestrator (ePO) DXL Python Client Library",
+    description="Cuckoo DXL Python Client Library",
 
     long_description=open('README').read(),
 

@@ -4,15 +4,15 @@
 ################################################################################
 from __future__ import absolute_import
 
-from .client import EpoClient, OutputFormat
+from .client import CuckooClient
 
-__version__ = "0.1.0"
+__version__ = "1.1.0"
 
 
 def get_version():
     """
-    Returns the version of the McAfee ePolicy Orchestrator (ePO) Client Library
+    Returns the version of the Cuckoo Client Library
 
-    :return: The version of the McAfee ePolicy Orchestrator (ePO) Client Library
+    :return: The version of the Cuckoo Client Library
     """
     return __version__

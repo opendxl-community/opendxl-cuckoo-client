@@ -12,8 +12,8 @@ from distutils.archive_util import make_archive
 
 print("Starting dist.\n")
 
-VERSION = __import__('dxlepoclient').get_version()
-RELEASE_NAME = "dxlepoclient-python-sdk-" + str(VERSION)
+VERSION = __import__('dxlcuckooclient').get_version()
+RELEASE_NAME = "dxlcuckooclient-python-sdk-" + str(VERSION)
 
 DIST_PY_FILE_LOCATION = os.path.dirname(os.path.realpath(__file__))
 DIST_DIRECTORY = os.path.join(DIST_PY_FILE_LOCATION, "dist")
@@ -38,7 +38,7 @@ subprocess.check_call(["sphinx-apidoc",
                        "--separate",
                        "--no-toc",
                        "--output-dir=" + DIST_DOCTMP_DIR,
-                       os.path.join(DIST_PY_FILE_LOCATION, "dxlepoclient")])
+                       os.path.join(DIST_PY_FILE_LOCATION, "dxlcuckooclient")])
 
 # Copy files to dist/doctmp
 print("\nCopying conf.py and sdk directory\n")
@@ -97,9 +97,9 @@ copy_tree(DIST_DIRECTORY, DIST_RELEASE_DIR)
 print("\nRemoving build directory\n")
 remove_tree(os.path.join(DIST_PY_FILE_LOCATION, "build"))
 
-# rm -rf dxlepoclient.egg-info
-print("\nRemoving dxlepoclient.egg-info\n")
-remove_tree(os.path.join(DIST_PY_FILE_LOCATION, "dxlepoclient.egg-info"))
+# rm -rf dxlcuckooclient.egg-info
+print("\nRemoving dxlcuckooclient.egg-info\n")
+remove_tree(os.path.join(DIST_PY_FILE_LOCATION, "dxlcuckooclient.egg-info"))
 
 # Make dist zip
 print("\nMaking dist zip\n")

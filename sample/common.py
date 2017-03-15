@@ -1,6 +1,6 @@
 
 """
-Common definitions for the MAR DXL Python SDK samples.
+Common definitions for the DXL Python SDK samples.
 This includes the defining the path to the configuration file used to initialize the DXL client
 in addition to setting up the logger appropriately.
 """
